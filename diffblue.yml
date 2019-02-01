@@ -1,0 +1,348 @@
+# Tested on Deeptest release 1.10.0
+cbmcArguments:
+  cover-function-only: false
+  depth: false
+  do-not-test-methods-with-access: [ private ]
+  java-generate-no-comments: true
+  no-trivial-tests: true
+  string-non-empty: true
+  string-printable: true
+units:
+  - target:
+    - dir: hsweb-datasource/hsweb-datasource-api/target/classes
+      file: org/hswebframework/web/datasource/AopDataSourceSwitcherAutoConfiguration.class
+      sourceDir: hsweb-datasource/hsweb-datasource-api/src/main/java
+      sourceFile: org/hswebframework/web/datasource/AopDataSourceSwitcherAutoConfiguration.java
+    # Child of AopDataSourceSwitcherAutoConfiguration.class
+    - dir: hsweb-commons/hsweb-commons-utils/target/classes
+      file: org/hswebframework/web/ExpressionUtils.class
+      sourceDir: hsweb-commons/hsweb-commons-utils/src/main/java
+      sourceFile: org/hswebframework/web/ExpressionUtils.java
+    # Child of AopDataSourceSwitcherAutoConfiguration.class
+    - dir: hsweb-boost/hsweb-boost-aop/target/classes
+      file: org/hswebframework/web/boost/aop/context/MethodInterceptorContext.class
+      sourceDir: hsweb-boost/hsweb-boost-aop/src/main/java
+      sourceFile: org/hswebframework/web/boost/aop/context/MethodInterceptorContext.java
+    # Child of AopDataSourceSwitcherAutoConfiguration.class
+    - dir: hsweb-boost/hsweb-boost-aop/target/classes
+      file: org/hswebframework/web/boost/aop/context/MethodInterceptorHolder.class
+      sourceDir: hsweb-boost/hsweb-boost-aop/src/main/java
+      sourceFile: org/hswebframework/web/boost/aop/context/MethodInterceptorHolder.java
+    # Child of AopDataSourceSwitcherAutoConfiguration.class
+    - dir: hsweb-datasource/hsweb-datasource-api/target/classes
+      file: org/hswebframework/web/datasource/exception/DataSourceNotFoundException.class
+      sourceDir: hsweb-datasource/hsweb-datasource-api/src/main/java
+      sourceFile: org/hswebframework/web/datasource/exception/DataSourceNotFoundException.java
+  - target:
+    - dir: hsweb-commons/hsweb-commons-service/hsweb-commons-service-simple/target/classes
+      file: org/hswebframework/web/service/DefaultLogicPrimaryKeyValidator.class
+      sourceDir: hsweb-commons/hsweb-commons-service/hsweb-commons-service-simple/src/main/java
+      sourceFile: org/hswebframework/web/service/DefaultLogicPrimaryKeyValidator.java
+    # Child of DefaultLogicPrimaryKeyValidator.class
+    - dir: hsweb-core/target/classes
+      file: org/hswebframework/web/bean/FastBeanCopier.class
+      sourceDir: hsweb-core/src/main/java
+      sourceFile: org/hswebframework/web/bean/FastBeanCopier.java
+    # Child of DefaultLogicPrimaryKeyValidator.class
+    - dir: hsweb-commons/hsweb-commons-entity/target/classes
+      file: org/hswebframework/web/commons/entity/param/QueryParamEntity.class
+      sourceDir: hsweb-commons/hsweb-commons-entity/src/main/java
+      sourceFile: org/hswebframework/web/commons/entity/param/QueryParamEntity.java
+    # Child of DefaultLogicPrimaryKeyValidator.class
+    - dir: hsweb-core/target/classes
+      file: org/hswebframework/web/validator/LogicPrimaryKey.class
+      sourceDir: hsweb-core/src/main/java
+      sourceFile: org/hswebframework/web/validator/LogicPrimaryKey.java
+    # Child of DefaultLogicPrimaryKeyValidator.class
+    - dir: hsweb-core/target/classes
+      file: org/hswebframework/web/validator/LogicPrimaryKeyValidator.class
+      sourceDir: hsweb-core/src/main/java
+      sourceFile: org/hswebframework/web/validator/LogicPrimaryKeyValidator.java
+  - target:
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/util/QueryUtils.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/util/QueryUtils.java
+    # Child of QueryUtils.class
+    - dir: hsweb-commons/hsweb-commons-entity/target/classes
+      file: org/hswebframework/web/commons/entity/PagerResult.class
+      sourceDir: hsweb-commons/hsweb-commons-entity/src/main/java
+      sourceFile: org/hswebframework/web/commons/entity/PagerResult.java
+  - target:
+    - dir: hsweb-core/target/classes
+      file: org/hswebframework/web/bean/DefaultToStringOperator.class
+      sourceDir: hsweb-core/src/main/java
+      sourceFile: org/hswebframework/web/bean/DefaultToStringOperator.java
+  - target:
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/web/FlowableProcessController.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/web/FlowableProcessController.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-core/target/classes
+      file: org/hswebframework/web/NotFoundException.class
+      sourceDir: hsweb-core/src/main/java
+      sourceFile: org/hswebframework/web/NotFoundException.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-authorization/hsweb-authorization-api/target/classes
+      file: org/hswebframework/web/authorization/Authentication.class
+      sourceDir: hsweb-authorization/hsweb-authorization-api/src/main/java
+      sourceFile: org/hswebframework/web/authorization/Authentication.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-authorization/hsweb-authorization-api/target/classes
+      file: org/hswebframework/web/authorization/Permission.class
+      sourceDir: hsweb-authorization/hsweb-authorization-api/src/main/java
+      sourceFile: org/hswebframework/web/authorization/Permission.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-authorization/hsweb-authorization-api/target/classes
+      file: org/hswebframework/web/authorization/annotation/Authorize.class
+      sourceDir: hsweb-authorization/hsweb-authorization-api/src/main/java
+      sourceFile: org/hswebframework/web/authorization/annotation/Authorize.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-commons/hsweb-commons-controller/target/classes
+      file: org/hswebframework/web/controller/message/ResponseMessage.class
+      sourceDir: hsweb-commons/hsweb-commons-controller/src/main/java
+      sourceFile: org/hswebframework/web/controller/message/ResponseMessage.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/service/BpmActivityService.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/service/BpmActivityService.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/service/WorkFlowFormService.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/service/WorkFlowFormService.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/service/config/CandidateInfo.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/service/config/CandidateInfo.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/service/config/ProcessConfigurationService.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/service/config/ProcessConfigurationService.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/service/BpmProcessService.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/service/BpmProcessService.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/service/BpmTaskService.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/service/BpmTaskService.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/service/request/CompleteTaskRequest.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/service/request/CompleteTaskRequest.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/service/request/JumpTaskRequest.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/service/request/JumpTaskRequest.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/service/request/RejectTaskRequest.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/service/request/RejectTaskRequest.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/service/request/StartProcessRequest.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/service/request/StartProcessRequest.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/util/QueryUtils.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/util/QueryUtils.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/web/response/CandidateDetail.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/web/response/CandidateDetail.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/web/response/ProcessInfo.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/web/response/ProcessInfo.java
+    # Child of FlowableProcessController.class
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/web/response/TaskInfo.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/web/response/TaskInfo.java
+  - target:
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/dimension/DefaultCandidateDimensionParser.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/dimension/DefaultCandidateDimensionParser.java
+    # Child of DefaultCandidateDimensionParser.class
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/dimension/parser/CandidateDimensionParserStrategy.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/dimension/parser/CandidateDimensionParserStrategy.java
+  - target:
+    - dir: hsweb-system/hsweb-system-organizational/hsweb-system-organizational-local/target/classes
+      file: org/hswebframework/web/service/organizational/simple/SimplePersonService.class
+      sourceDir: hsweb-system/hsweb-system-organizational/hsweb-system-organizational-local/src/main/java
+      sourceFile: org/hswebframework/web/service/organizational/simple/SimplePersonService.java
+    # Child of SimplePersonService.class
+    - dir: hsweb-commons/hsweb-commons-entity/target/classes
+      file: org/hswebframework/web/commons/entity/DataStatus.class
+      sourceDir: hsweb-commons/hsweb-commons-entity/src/main/java
+      sourceFile: org/hswebframework/web/commons/entity/DataStatus.java
+    # Child of SimplePersonService.class
+    - dir: hsweb-commons/hsweb-commons-entity/target/classes
+      file: org/hswebframework/web/commons/entity/TreeSupportEntity.class
+      sourceDir: hsweb-commons/hsweb-commons-entity/src/main/java
+      sourceFile: org/hswebframework/web/commons/entity/TreeSupportEntity.java
+    # Child of SimplePersonService.class
+    - dir: hsweb-commons/hsweb-commons-dao/hsweb-commons-dao-api/target/classes
+      file: org/hswebframework/web/dao/dynamic/QueryByEntityDao.class
+      sourceDir: hsweb-commons/hsweb-commons-dao/hsweb-commons-dao-api/src/main/java
+      sourceFile: org/hswebframework/web/dao/dynamic/QueryByEntityDao.java
+    # Child of SimplePersonService.class
+    - dir: hsweb-system/hsweb-system-authorization/hsweb-system-authorization-api/target/classes
+      file: org/hswebframework/web/entity/authorization/UserEntity.class
+      sourceDir: hsweb-system/hsweb-system-authorization/hsweb-system-authorization-api/src/main/java
+      sourceFile: org/hswebframework/web/entity/authorization/UserEntity.java
+    # Child of SimplePersonService.class
+    - dir: hsweb-core/target/classes
+      file: org/hswebframework/web/id/IDGenerator.class
+      sourceDir: hsweb-core/src/main/java
+      sourceFile: org/hswebframework/web/id/IDGenerator.java
+    # Child of SimplePersonService.class
+    - dir: hsweb-system/hsweb-system-organizational/hsweb-system-organizational-authorization/target/classes
+      file: org/hswebframework/web/organizational/authorization/relation/Relation.class
+      sourceDir: hsweb-system/hsweb-system-organizational/hsweb-system-organizational-authorization/src/main/java
+      sourceFile: org/hswebframework/web/organizational/authorization/relation/Relation.java
+    # Child of SimplePersonService.class
+    - dir: hsweb-system/hsweb-system-organizational/hsweb-system-organizational-authorization/target/classes
+      file: org/hswebframework/web/organizational/authorization/relation/SimpleRelation.class
+      sourceDir: hsweb-system/hsweb-system-organizational/hsweb-system-organizational-authorization/src/main/java
+      sourceFile: org/hswebframework/web/organizational/authorization/relation/SimpleRelation.java
+    # Child of SimplePersonService.class
+    - dir: hsweb-system/hsweb-system-organizational/hsweb-system-organizational-authorization/target/classes
+      file: org/hswebframework/web/organizational/authorization/relation/SimpleRelations.class
+      sourceDir: hsweb-system/hsweb-system-organizational/hsweb-system-organizational-authorization/src/main/java
+      sourceFile: org/hswebframework/web/organizational/authorization/relation/SimpleRelations.java
+    # Child of SimplePersonService.class
+    - dir: hsweb-commons/hsweb-commons-service/hsweb-commons-service-simple/target/classes
+      file: org/hswebframework/web/service/DefaultDSLQueryService.class
+      sourceDir: hsweb-commons/hsweb-commons-service/hsweb-commons-service-simple/src/main/java
+      sourceFile: org/hswebframework/web/service/DefaultDSLQueryService.java
+    # Child of SimplePersonService.class
+    - dir: hsweb-commons/hsweb-commons-service/hsweb-commons-service-simple/target/classes
+      file: org/hswebframework/web/service/EnableCacheAllEvictGenericEntityService.class
+      sourceDir: hsweb-commons/hsweb-commons-service/hsweb-commons-service-simple/src/main/java
+      sourceFile: org/hswebframework/web/service/EnableCacheAllEvictGenericEntityService.java
+    # Child of SimplePersonService.class
+    - dir: hsweb-system/hsweb-system-authorization/hsweb-system-authorization-api/target/classes
+      file: org/hswebframework/web/service/authorization/UserService.class
+      sourceDir: hsweb-system/hsweb-system-authorization/hsweb-system-authorization-api/src/main/java
+      sourceFile: org/hswebframework/web/service/authorization/UserService.java
+    # Child of SimplePersonService.class
+    - dir: hsweb-system/hsweb-system-organizational/hsweb-system-organizational-api/target/classes
+      file: org/hswebframework/web/service/organizational/PersonService.class
+      sourceDir: hsweb-system/hsweb-system-organizational/hsweb-system-organizational-api/src/main/java
+      sourceFile: org/hswebframework/web/service/organizational/PersonService.java
+    # Child of SimplePersonService.class
+    - dir: hsweb-system/hsweb-system-organizational/hsweb-system-organizational-api/target/classes
+      file: org/hswebframework/web/service/organizational/event/ClearPersonCacheEvent.class
+      sourceDir: hsweb-system/hsweb-system-organizational/hsweb-system-organizational-api/src/main/java
+      sourceFile: org/hswebframework/web/service/organizational/event/ClearPersonCacheEvent.java
+  - target:
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/listener/GlobalEventListenerDispatcher.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/listener/GlobalEventListenerDispatcher.java
+    # Child of GlobalEventListenerDispatcher.class
+    - dir: hsweb-authorization/hsweb-authorization-api/target/classes
+      file: org/hswebframework/web/authorization/User.class
+      sourceDir: hsweb-authorization/hsweb-authorization-api/src/main/java
+      sourceFile: org/hswebframework/web/authorization/User.java
+    # Child of GlobalEventListenerDispatcher.class
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/service/ProcessDefineConfigService.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/service/ProcessDefineConfigService.java
+    # Child of GlobalEventListenerDispatcher.class
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/service/config/ActivityConfiguration.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/service/config/ActivityConfiguration.java
+    # Child of GlobalEventListenerDispatcher.class
+    - dir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/target/classes
+      file: org/hswebframework/web/workflow/service/config/ProcessConfiguration.class
+      sourceDir: hsweb-system/hsweb-system-workflow/hsweb-system-workflow-local/src/main/java
+      sourceFile: org/hswebframework/web/workflow/service/config/ProcessConfiguration.java
+  - target:
+    - dir: hsweb-authorization/hsweb-authorization-basic/target/classes
+      file: org/hswebframework/web/authorization/basic/configuration/BasicAuthorizationTokenParser.class
+      sourceDir: hsweb-authorization/hsweb-authorization-basic/src/main/java
+      sourceFile: org/hswebframework/web/authorization/basic/configuration/BasicAuthorizationTokenParser.java
+    # Child of BasicAuthorizationTokenParser.class
+    - dir: hsweb-authorization/hsweb-authorization-api/target/classes
+      file: org/hswebframework/web/authorization/AuthenticationManager.class
+      sourceDir: hsweb-authorization/hsweb-authorization-api/src/main/java
+      sourceFile: org/hswebframework/web/authorization/AuthenticationManager.java
+    # Child of BasicAuthorizationTokenParser.class
+    - dir: hsweb-authorization/hsweb-authorization-basic/target/classes
+      file: org/hswebframework/web/authorization/basic/web/AuthorizedToken.class
+      sourceDir: hsweb-authorization/hsweb-authorization-basic/src/main/java
+      sourceFile: org/hswebframework/web/authorization/basic/web/AuthorizedToken.java
+    # Child of BasicAuthorizationTokenParser.class
+    - dir: hsweb-authorization/hsweb-authorization-basic/target/classes
+      file: org/hswebframework/web/authorization/basic/web/ParsedToken.class
+      sourceDir: hsweb-authorization/hsweb-authorization-basic/src/main/java
+      sourceFile: org/hswebframework/web/authorization/basic/web/ParsedToken.java
+    # Child of BasicAuthorizationTokenParser.class
+    - dir: hsweb-authorization/hsweb-authorization-basic/target/classes
+      file: org/hswebframework/web/authorization/basic/web/UserTokenForTypeParser.class
+      sourceDir: hsweb-authorization/hsweb-authorization-basic/src/main/java
+      sourceFile: org/hswebframework/web/authorization/basic/web/UserTokenForTypeParser.java
+    # Child of BasicAuthorizationTokenParser.class
+    - dir: hsweb-authorization/hsweb-authorization-api/target/classes
+      file: org/hswebframework/web/authorization/simple/PlainTextUsernamePasswordAuthenticationRequest.class
+      sourceDir: hsweb-authorization/hsweb-authorization-api/src/main/java
+      sourceFile: org/hswebframework/web/authorization/simple/PlainTextUsernamePasswordAuthenticationRequest.java
+    # Child of BasicAuthorizationTokenParser.class
+    - dir: hsweb-authorization/hsweb-authorization-api/target/classes
+      file: org/hswebframework/web/authorization/token/UserToken.class
+      sourceDir: hsweb-authorization/hsweb-authorization-api/src/main/java
+      sourceFile: org/hswebframework/web/authorization/token/UserToken.java
+    # Child of BasicAuthorizationTokenParser.class
+    - dir: hsweb-authorization/hsweb-authorization-api/target/classes
+      file: org/hswebframework/web/authorization/token/UserTokenManager.class
+      sourceDir: hsweb-authorization/hsweb-authorization-api/src/main/java
+      sourceFile: org/hswebframework/web/authorization/token/UserTokenManager.java
+  - target:
+    - dir: hsweb-system/hsweb-system-dictionary/hsweb-system-dictionary-local/target/classes
+      file: org/hswebframework/web/dictionary/simple/parser/SimpleDictParserFormatter.class
+      sourceDir: hsweb-system/hsweb-system-dictionary/hsweb-system-dictionary-local/src/main/java
+      sourceFile: org/hswebframework/web/dictionary/simple/parser/SimpleDictParserFormatter.java
+    # Child of SimpleDictParserFormatter.class
+    - dir: hsweb-commons/hsweb-commons-utils/target/classes
+      file: org/hswebframework/web/RegexUtils.class
+      sourceDir: hsweb-commons/hsweb-commons-utils/src/main/java
+      sourceFile: org/hswebframework/web/RegexUtils.java
+phases:
+-
+  timeout: 300
+  cbmcArguments:
+    java-assume-inputs-non-null: true
+    max-nondet-array-length: 10
+    unwind: 1
+-
+  timeout: 300
+  cbmcArguments:
+    max-nondet-array-length: 20
+    unwind: 2
+-
+  timeout: 300
+  cbmcArguments:
+    max-nondet-array-length: 30
+    max-nondet-string-length: 10
+    unwind: 3
